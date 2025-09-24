@@ -1,6 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <servicios>
   <servicio id="000000001">
     <nombre>Cambio de aceite</nombre>
     <precio>25000</precio>
+  </servicio>
+  <servicio id="000000123">
+    <nombre>Alineación</nombre>
+    <precio>18000</precio>
   </servicio>
 </servicios>

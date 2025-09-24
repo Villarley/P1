@@ -1,8 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <clientes>
   <cliente id="0102030405">
     <nombre>Juan Pérez</nombre>
     <placa>ABC123</placa>
     <telefono>8888-8888</telefono>
     <email>juan@example.com</email>
+  </cliente>
+  <cliente id="999999999">
+    <nombre>Ana S. Solano</nombre>
+    <placa>XYZ987</placa>
+    <telefono>7000-1111</telefono>
+    <email>ana@ejemplo.com</email>
   </cliente>
 </clientes>

@@ -1,9 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <mecanicos>
   <mecanico id="000000777">
     <nombre>María Rodríguez</nombre>
     <puesto>Técnico Senior</puesto>
     <servicios>
       <id>000000001</id>
+    </servicios>
+  </mecanico>
+  <mecanico id="000000888">
+    <nombre>Pedro Núñez</nombre>
+    <puesto>Técnico</puesto>
+    <servicios>
+      <id>000000123</id>
     </servicios>
   </mecanico>
 </mecanicos>
