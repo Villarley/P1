@@ -1,0 +1,6 @@
+<servicios>
+  <servicio id="000000001">
+    <nombre>Cambio de aceite</nombre>
+    <precio>25000</precio>
+  </servicio>
+</servicios>

@@ -1,0 +1,9 @@
+<mecanicos>
+  <mecanico id="000000777">
+    <nombre>María Rodríguez</nombre>
+    <puesto>Técnico Senior</puesto>
+    <servicios>
+      <id>000000001</id>
+    </servicios>
+  </mecanico>
+</mecanicos>

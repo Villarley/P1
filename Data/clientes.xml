@@ -1,0 +1,8 @@
+<clientes>
+  <cliente id="0102030405">
+    <nombre>Juan Pérez</nombre>
+    <placa>ABC123</placa>
+    <telefono>8888-8888</telefono>
+    <email>juan@example.com</email>
+  </cliente>
+</clientes>
