@@ -10,8 +10,13 @@
   <mecanico id="000000888">
     <nombre>Pedro Núñez</nombre>
     <puesto>Técnico</puesto>
+    <servicios/>
+  </mecanico>
+  <mecanico id="M000001">
+    <nombre>Rene</nombre>
+    <puesto>Senior</puesto>
     <servicios>
-      <id>000000123</id>
+      <id>S000001</id>
     </servicios>
   </mecanico>
 </mecanicos>

@@ -12,4 +12,10 @@
     <telefono>7000-1111</telefono>
     <email>ana@ejemplo.com</email>
   </cliente>
+  <cliente id="C000001">
+    <nombre>Santi</nombre>
+    <placa>BCD537</placa>
+    <telefono>86776886</telefono>
+    <email>santivillarley1010@gmail.com</email>
+  </cliente>
 </clientes>

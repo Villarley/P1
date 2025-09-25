@@ -18,7 +18,6 @@ import org.w3c.dom.NodeList;
 
 public class CargadorXML {
 
-    // ======== Helpers EXACTO ESTILO DEL EJEMPLO ========
     private static String getValue(String tag, Element elemento) {
         NodeList nl = elemento.getElementsByTagName(tag);
         if (nl.getLength() == 0) return "";
@@ -26,7 +25,6 @@ public class CargadorXML {
     }
 
     // ======== CLIENTES ========
-    // Igual que el ejemplo: Cargar(String archivo) → ArrayList<Cliente>
     public static ArrayList<Cliente> Cargar(String archivo) { // clientes
         ArrayList<Cliente> clientes = new ArrayList<>();
         try {
@@ -193,7 +191,6 @@ public class CargadorXML {
         }
     }
 
-    // ======== Helpers para escritura (mismo archivo util) ========
     private static void XmlWrite(Document doc, File destino) throws Exception {
         javax.xml.transform.TransformerFactory tf = javax.xml.transform.TransformerFactory.newInstance();
         javax.xml.transform.Transformer t = tf.newTransformer();

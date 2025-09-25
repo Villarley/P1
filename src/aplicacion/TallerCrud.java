@@ -138,6 +138,60 @@ public class TallerCrud {
         return true;
     }
 
+    // ====== Generación de IDs ======
+    public static String generarIdCliente() {
+        return generarIdUnico("C", clientes, Cliente::getId);
+    }
+    
+    public static String generarIdServicio() {
+        return generarIdUnico("S", servicios, Servicio::getId);
+    }
+    
+    public static String generarIdMecanico() {
+        return generarIdUnico("M", mecanicos, Mecanico::getId);
+    }
+    
+    private static <T> String generarIdUnico(String prefijo, ArrayList<T> lista, java.util.function.Function<T, String> getId) {
+        int contador = 1;
+        String id;
+        do {
+            id = prefijo + String.format("%06d", contador);
+            contador++;
+            final String currentId = id; // Variable final para la lambda
+            if (lista.stream().anyMatch(item -> getId.apply(item).equals(currentId))) {
+                continue; // Si existe, continúa con el siguiente número
+            }
+            break; // Si no existe, usa este ID
+        } while (true);
+        return id;
+    }
+    
+    // ====== Validación de IDs ======
+    public static boolean validarIdCliente(String id) {
+        return !isBlank(id) && findCliente(id) == null;
+    }
+    
+    public static boolean validarIdServicio(String id) {
+        return !isBlank(id) && findServicio(id) == null;
+    }
+    
+    public static boolean validarIdMecanico(String id) {
+        return !isBlank(id) && findMecanico(id) == null;
+    }
+    
+    // ====== Búsqueda por ID ======
+    public static Cliente buscarCliente(String id) {
+        return findCliente(id);
+    }
+    
+    public static Servicio buscarServicio(String id) {
+        return findServicio(id);
+    }
+    
+    public static Mecanico buscarMecanico(String id) {
+        return findMecanico(id);
+    }
+
     // ====== Helpers ======
     private static Cliente findCliente(String id) {
         for (Cliente c : clientes) if (c.getId().equals(id)) return c;

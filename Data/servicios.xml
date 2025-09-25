@@ -4,8 +4,8 @@
     <nombre>Cambio de aceite</nombre>
     <precio>25000</precio>
   </servicio>
-  <servicio id="000000123">
-    <nombre>Alineación</nombre>
-    <precio>18000</precio>
+  <servicio id="S000001">
+    <nombre>Alineado</nombre>
+    <precio>30000</precio>
   </servicio>
 </servicios>
