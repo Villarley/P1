@@ -6,6 +6,7 @@ package ventanas;
 
 import java.awt.Color;
 import ventanas.VentCli;
+import ventanas.VentServ;
 
 /**
  *
@@ -37,8 +38,8 @@ public class Principal extends javax.swing.JFrame {
     Servicios.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
     Servicios.addMouseListener(new java.awt.event.MouseAdapter() {
         public void mouseClicked(java.awt.event.MouseEvent evt) {
-            VentCli VentCli = new VentCli(Principal.this,true);
-            VentCli.setVisible(true);
+            VentServ VentServ = new VentServ(Principal.this,true);
+            VentServ.setVisible(true);
         }
     });
     

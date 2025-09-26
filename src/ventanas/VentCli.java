@@ -11,6 +11,7 @@ import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
 import util.CargadorXML;
 import java.util.List;
+import javax.swing.JOptionPane;
 /**
  *
  * @author andre
@@ -56,6 +57,7 @@ public class VentCli extends javax.swing.JDialog {
         jScrollPane2 = new javax.swing.JScrollPane();
         TablaCli = new javax.swing.JTable();
         IDP = new javax.swing.JLabel();
+        Salir = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -131,6 +133,13 @@ public class VentCli extends javax.swing.JDialog {
 
         IDP.setText("Codigo");
 
+        Salir.setText("Salir");
+        Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -138,6 +147,9 @@ public class VentCli extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2)
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -147,7 +159,7 @@ public class VentCli extends javax.swing.JDialog {
                             .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TelefonoP, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(TelefonoP, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
                             .addComponent(NombreP)
                             .addComponent(PlacaP)
                             .addComponent(CorreoP)
@@ -160,10 +172,11 @@ public class VentCli extends javax.swing.JDialog {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Modificar)
                             .addComponent(Blanquear))
-                        .addGap(38, 38, 38))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addGap(38, 38, 38))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Salir)
+                .addGap(38, 38, 38))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,9 +212,11 @@ public class VentCli extends javax.swing.JDialog {
                             .addComponent(CorreoP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Correo)))
                     .addComponent(ID))
-                .addGap(42, 42, 42)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Salir)
+                .addGap(26, 26, 26))
         );
 
         pack();
@@ -257,9 +272,10 @@ public class VentCli extends javax.swing.JDialog {
         Cliente cliente = new Cliente(id, nombre, placa, telefono, email);
         if (TallerCrud.crearCliente(cliente)) {
             Rellenar();
-        } else {
-            Mensaje msj = new Mensaje(VentCli.this,true);
+        } else{
+            JOptionPane.showMessageDialog(null, "No se pudo realizar la insercion", "Error", JOptionPane.ERROR_MESSAGE);
         }
+        IDP.setText("Codigo");
         TelefonoP.setText("");
         CorreoP.setText("");
         PlacaP.setText("");
@@ -310,6 +326,10 @@ public class VentCli extends javax.swing.JDialog {
             
         }
     }//GEN-LAST:event_ModificarActionPerformed
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        VentCli.this.dispose();
+    }//GEN-LAST:event_SalirActionPerformed
 
    
     /**
@@ -367,6 +387,7 @@ public class VentCli extends javax.swing.JDialog {
     private javax.swing.JButton Nuevo;
     private javax.swing.JLabel Placa;
     private javax.swing.JTextField PlacaP;
+    private javax.swing.JButton Salir;
     private javax.swing.JTable TablaCli;
     private javax.swing.JLabel Telefono;
     private javax.swing.JTextField TelefonoP;

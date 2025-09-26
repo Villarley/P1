@@ -8,4 +8,8 @@
     <nombre>Alineado</nombre>
     <precio>30000</precio>
   </servicio>
+  <servicio id="S000003">
+    <nombre>aaa</nombre>
+    <precio>23</precio>
+  </servicio>
 </servicios>

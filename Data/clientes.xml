@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <clientes>
   <cliente id="C000001">
-    <nombre>Andres</nombre>
-    <placa>bcd501</placa>
-    <telefono>78985651</telefono>
-    <email>andres@gmail.com</email>
-  </cliente>
-  <cliente id="C000002">
     <nombre/>
     <placa/>
     <telefono/>
     <email/>
   </cliente>
   <cliente id="C000003">
-    <nombre>AndresBanano</nombre>
-    <placa>Banano</placa>
-    <telefono>897547256</telefono>
-    <email>soyunbanano@gmail.com</email>
-  </cliente>
-  <cliente id="C000004">
     <nombre/>
     <placa/>
     <telefono/>
