@@ -47,8 +47,8 @@ public class Principal extends javax.swing.JFrame {
     Mecanicos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
     Mecanicos.addMouseListener(new java.awt.event.MouseAdapter() {
         public void mouseClicked(java.awt.event.MouseEvent evt) {
-            VentCli VentCli = new VentCli(Principal.this,true);
-            VentCli.setVisible(true);
+            VentMec VentMec = new VentMec(Principal.this,true);
+            VentMec.setVisible(true);
         }
     });
 }

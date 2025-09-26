@@ -95,6 +95,14 @@ public class TallerCrud {
         saveMecanicos();
         return true;
     }
+    
+    public static Servicio findServicioPorNombre(String nombre) {
+    for (Servicio s : listarServicios()) {
+        if (s.getNombre().equals(nombre)) return s;
+    }
+    return null;
+}
+
 
     // ====== MECÁNICO ======
     public static boolean crearMecanico(Mecanico m) {

@@ -9,7 +9,6 @@ import conceptos.Cliente;
 import java.util.ArrayList;
 import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
-import util.CargadorXML;
 import java.util.List;
 import javax.swing.JOptionPane;
 /**
