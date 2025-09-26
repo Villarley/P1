@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
 import util.CargadorXML;
+import java.util.List;
 /**
  *
  * @author andre
@@ -208,10 +209,11 @@ public class VentCli extends javax.swing.JDialog {
 
     
     //Crear, escribir y actualizar tabla
-    ArrayList<Cliente>  clientes  = new ArrayList<>();
+    List<Cliente>  clientes  = new ArrayList<>();
     private void Rellenar(){
         String XML_CLIENTES   = "Data/clientes.xml";
-        clientes  = CargadorXML.Cargar(XML_CLIENTES);
+        TallerCrud.loadAll();
+        clientes  = TallerCrud.listarClientes();
             //Columnas de la tabla
             Vector<String> columnas = new Vector<String>();
             columnas.addElement("ID");

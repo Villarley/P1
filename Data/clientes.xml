@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <clientes>
-  <cliente id="0102030405">
-    <nombre>Juan Pérez</nombre>
-    <placa>ABC123</placa>
-    <telefono>8888-8888</telefono>
-    <email>juan@example.com</email>
-  </cliente>
-  <cliente id="999999999">
-    <nombre>Ana S. Solano</nombre>
-    <placa>XYZ987</placa>
-    <telefono>7000-1111</telefono>
-    <email>ana@ejemplo.com</email>
-  </cliente>
   <cliente id="C000001">
-    <nombre>Santi</nombre>
-    <placa>BCD537</placa>
-    <telefono>86776886</telefono>
-    <email>santivillarley1010@gmail.com</email>
+    <nombre>Andres</nombre>
+    <placa>bcd501</placa>
+    <telefono>78985651</telefono>
+    <email>andres@gmail.com</email>
+  </cliente>
+  <cliente id="C000002">
+    <nombre/>
+    <placa/>
+    <telefono/>
+    <email/>
+  </cliente>
+  <cliente id="C000003">
+    <nombre>AndresBanano</nombre>
+    <placa>Banano</placa>
+    <telefono>897547256</telefono>
+    <email>soyunbanano@gmail.com</email>
+  </cliente>
+  <cliente id="C000004">
+    <nombre/>
+    <placa/>
+    <telefono/>
+    <email/>
   </cliente>
 </clientes>
