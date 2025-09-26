@@ -3,6 +3,7 @@ package aplicacion;
 import conceptos.Cliente;
 import conceptos.Mecanico;
 import conceptos.Servicio;
+import ventanas.Principal;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ public class Main {
     private static final Scanner scanner = new Scanner(System.in);
     
     public static void main(String[] args) {
-        System.out.println("=== SISTEMA DE GESTIÓN DE TALLER MECÁNICO ===");
+        /*System.out.println("=== SISTEMA DE GESTIÓN DE TALLER MECÁNICO ===");
         
         // Cargar datos desde XML
         TallerCrud.loadAll();
@@ -449,6 +450,9 @@ public class Main {
             } catch (NumberFormatException e) {
                 System.out.println("Por favor ingrese un precio válido.");
             }
-        }
+        }*/
+        
+        Principal principal = new Principal();
+        principal.setVisible(true);
     }
 }
