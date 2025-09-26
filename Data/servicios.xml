@@ -9,7 +9,7 @@
     <precio>30000</precio>
   </servicio>
   <servicio id="S000003">
-    <nombre>aaa</nombre>
-    <precio>23</precio>
+    <nombre>Chasis</nombre>
+    <precio>23000</precio>
   </servicio>
 </servicios>

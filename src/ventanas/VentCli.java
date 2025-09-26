@@ -319,6 +319,8 @@ public class VentCli extends javax.swing.JDialog {
             TablaCli.setValueAt(PlacaP.getText(),fila, 2);
             TablaCli.setValueAt(TelefonoP.getText(),fila, 3);
             TablaCli.setValueAt(CorreoP.getText(),fila, 4);
+            Cliente cliente = new Cliente(IDP.getText(),NombreP.getText(),PlacaP.getText(),TelefonoP.getText(),CorreoP.getText());
+            TallerCrud.actualizarCliente(cliente);
             TelefonoP.setText("");
             CorreoP.setText("");
             PlacaP.setText("");

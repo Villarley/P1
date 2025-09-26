@@ -220,6 +220,14 @@ public class VentServ extends javax.swing.JDialog {
             TablaServ.setValueAt(IDP.getText(),fila, 0);
             TablaServ.setValueAt(NombreP.getText(),fila, 1);
             TablaServ.setValueAt(PrecioP.getText(),fila, 2);
+            BigDecimal precio = null;
+            try {
+                precio = new BigDecimal(PrecioP.getText());
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Ingrese un número válido", "Error de valor", JOptionPane.ERROR_MESSAGE);
+            }
+            Servicio servicio = new Servicio(IDP.getText(),NombreP.getText(),precio);
+            TallerCrud.actualizarServicio(servicio);
             PrecioP.setText("");
             NombreP.setText("");
 

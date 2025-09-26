@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <clientes>
   <cliente id="C000001">
-    <nombre/>
+    <nombre>aaa</nombre>
     <placa/>
     <telefono/>
     <email/>
   </cliente>
   <cliente id="C000003">
+    <nombre>aaaa</nombre>
+    <placa>ww</placa>
+    <telefono/>
+    <email/>
+  </cliente>
+  <cliente id="C000002">
     <nombre/>
-    <placa/>
+    <placa>qqqqq</placa>
     <telefono/>
     <email/>
   </cliente>
