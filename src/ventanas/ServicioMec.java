@@ -7,6 +7,7 @@ package ventanas;
 import aplicacion.TallerCrud;
 import conceptos.Servicio;
 import conceptos.Mecanico;
+import java.awt.Color;
 import ventanas.VentMec;
 import java.util.ArrayList;
 import java.util.Vector;
@@ -28,6 +29,7 @@ public class ServicioMec extends javax.swing.JDialog {
         setTitle("Servicios del Mecanico");
         setSize(404,330);
         setLocationRelativeTo(null);
+        this.getContentPane().setBackground(Color.WHITE);
         Rellenar();
     }
 

@@ -14,7 +14,7 @@
   </mecanico>
   <mecanico id="M000001">
     <nombre>Rene</nombre>
-    <puesto>Seniorr</puesto>
+    <puesto>Senior</puesto>
     <servicios>
       <id>S000001</id>
     </servicios>

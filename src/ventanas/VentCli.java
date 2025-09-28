@@ -6,6 +6,7 @@ package ventanas;
 
 import aplicacion.TallerCrud;
 import conceptos.Cliente;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
@@ -23,6 +24,7 @@ public class VentCli extends javax.swing.JDialog {
     public VentCli(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.getContentPane().setBackground(Color.lightGray);
         setTitle("Menu Clientes");
         setSize(620,500);
         setLocationRelativeTo(null);
@@ -57,6 +59,7 @@ public class VentCli extends javax.swing.JDialog {
         TablaCli = new javax.swing.JTable();
         IDP = new javax.swing.JLabel();
         Salir = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -139,6 +142,8 @@ public class VentCli extends javax.swing.JDialog {
             }
         });
 
+        jLabel1.setText("AutoTaller el Buen Precio®");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -173,7 +178,9 @@ public class VentCli extends javax.swing.JDialog {
                             .addComponent(Blanquear))
                         .addGap(38, 38, 38))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(48, 48, 48)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Salir)
                 .addGap(38, 38, 38))
         );
@@ -214,7 +221,9 @@ public class VentCli extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(Salir)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Salir)
+                    .addComponent(jLabel1))
                 .addGap(26, 26, 26))
         );
 
@@ -392,6 +401,7 @@ public class VentCli extends javax.swing.JDialog {
     private javax.swing.JTable TablaCli;
     private javax.swing.JLabel Telefono;
     private javax.swing.JTextField TelefonoP;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;

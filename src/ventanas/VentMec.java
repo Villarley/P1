@@ -6,6 +6,7 @@ package ventanas;
 
 import aplicacion.TallerCrud;
 import conceptos.Mecanico;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
@@ -28,6 +29,7 @@ public class VentMec extends javax.swing.JDialog {
         setTitle("Menu Mecanicos");
         setSize(620,500);
         setLocationRelativeTo(null);
+        this.getContentPane().setBackground(Color.lightGray);
         Rellenar();
     }
 
@@ -54,6 +56,7 @@ public class VentMec extends javax.swing.JDialog {
         TablaMec = new javax.swing.JTable();
         Salir = new javax.swing.JButton();
         Servicios = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -126,11 +129,13 @@ public class VentMec extends javax.swing.JDialog {
             }
         });
 
+        jLabel1.setText("AutoTaller el Buen Precio®");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(Servicios, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
@@ -142,6 +147,10 @@ public class VentMec extends javax.swing.JDialog {
                     .addComponent(Modificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Blanquear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(35, 35, 35))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -183,7 +192,9 @@ public class VentMec extends javax.swing.JDialog {
                             .addComponent(Borrar)
                             .addComponent(Blanquear)))
                     .addComponent(Servicios))
-                .addContainerGap(306, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 284, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -357,6 +368,7 @@ public class VentMec extends javax.swing.JDialog {
     private javax.swing.JButton Salir;
     private javax.swing.JButton Servicios;
     private javax.swing.JTable TablaMec;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }
